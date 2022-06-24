@@ -18,7 +18,7 @@ May not use replace() methord or regular expressions
 function replaceSpace(string) {
   resultString = "";
   for (let i = 0; i < string.length) {
-    if (string[i] == " ") {
+    if (string[i] === " ") {
       resultString += "%20";
     } else {
       resultString += string[i];
@@ -28,3 +28,11 @@ function replaceSpace(string) {
 }
 
 
+const recursiveReplaceString(string) {
+  resultString = "";
+  if (string[i] === " ") {
+    resultString += "%20";
+  } else {
+    return recursiveReplaceString(resultString += string[i]);
+  }
+}
