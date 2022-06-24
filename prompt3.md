@@ -13,18 +13,21 @@ i.e. aaa = 3a
 
 function compressString(string) {
   stringArray = string.map();
-  tempArray = []
   resultString = "";
   for (let i = 0; i < stringArray.length; i++){
-    for (let j = 0; j < stringArray.length; j++) {
-      if (j != i && stringArray[i] === stringArray[j])
-      {
-        stringArray.pop(stringArray[j])
-        tempArray.push(stringArray[i])
+    let count = 1;
+    let  currentLetter = stringArray[i];
+    while (i < stringArray.length - 1 && stringArray[i] === stringArray[i + 1]) {
+        count++;
+        i++;
+      }
+      if (count === 1) {
+        resultString += currentLetter;
       } else {
-          resultString += stringArray[i];
+        resultString += currentLetter + count;
       }
     }
   }
   return resultString;
 }
+
