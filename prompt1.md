@@ -28,7 +28,7 @@ function replaceSpace(string) {
 }
 
 
-const recursiveReplaceString(string) {
+const recursiveReplaceString = (string) => {
   resultString = "";
   if (string[i] === " ") {
     resultString += "%20";
