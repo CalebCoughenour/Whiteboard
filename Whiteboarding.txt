@@ -1,0 +1,23 @@
+write an algorithm that removes duplicates from an array
+do not use filter()
+
+input = [7, 9, 12, 7, 53]
+output = [7, 9, 12, 53]
+
+1. write a function that takes in an array, add duplicate array of input
+2. loop through input array for the length of input array
+3. add a conditional that checks the element inputArray[i] to the duplicateArray[i]
+4. if condition is true then remove element inputArray[i]
+5. if false, move to next element
+6. return the altered inputArray with removed duplicates
+
+
+function removeDuplicate(array) {
+  duplicateArray = array;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === duplicateArray[i]) {
+      array.splice(i, 1);
+    }
+  }
+  return array;
+}
