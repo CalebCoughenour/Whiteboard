@@ -19,3 +19,14 @@ function removeDuplicates (inputArray) {
   }
   return inputArray;
 }
+
+function filterDuplicates (inputArray) {
+  for (let i = 0; i < inputArray.length; i++) {
+    for (let j = 0; j < inputArray.length; i++) {
+      if (inputArray[j] === inputArray[i] && j != i) {
+        inputArray.filter(e => inputArray[i]);
+      }
+    }
+  }
+  return inputArray;
+}
