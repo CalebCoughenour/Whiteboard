@@ -9,3 +9,13 @@ after solving demonstrate the use of "filter()"
 5. if not equal, move to next element
 6. return altered array, removed duplicates
 
+function removeDuplicates (inputArray) {
+  for (let i = 0; i < inputArray.length; i++) {
+    for (let j = 0; j < inputArray.length; i++) {
+      if (inputArray[j] === inputArray[i] && j != i) {
+        inputArray.pop(inputArray[i]);
+      }
+    }
+  }
+  return inputArray;
+}
