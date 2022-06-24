@@ -27,12 +27,15 @@ function replaceSpace(string) {
   return resultString;
 }
 
+<!-- Recursion -->
 
 const recursiveReplaceString = (string) => {
   resultString = "";
   if (string[i] === " ") {
     resultString += "%20";
+    return recursiveReplaceString(string.substring(1));
   } else {
-    return recursiveReplaceString(resultString += string[i]);
+    resultString += string.charAt(0);
+    return recursiveReplaceString(string.substring(1));
   }
 }
